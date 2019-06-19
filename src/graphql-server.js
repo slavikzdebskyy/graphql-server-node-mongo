@@ -1,5 +1,5 @@
-const app = require('./app');
-const { PORT } = require('./constans');
+import app from './app';
+import { PORT } from './constans';
 
 const currPort = process.env.PORT || PORT;
 

@@ -1,4 +1,4 @@
-const graphql = require('graphql');
+import * as graphql from 'graphql';
 
 const DescriptionType = new graphql.GraphQLObjectType({
   name: 'Description',
@@ -7,6 +7,14 @@ const DescriptionType = new graphql.GraphQLObjectType({
     description: { type: graphql.GraphQLString }
   }
 });
+
+const inputDescriptionType = new graphql.GraphQLInputObjectType({
+  name: 'inputDescriptionType',
+  fields: {
+    title: { type: graphql.GraphQLString },
+    description: { type: graphql.GraphQLString }
+  }
+})
 
 const MustVisitType = new graphql.GraphQLObjectType({
   name: 'MustVisit',
@@ -29,7 +37,8 @@ const CityType = new graphql.GraphQLObjectType({
   }
 });
 
-module.exports = {
+export {
   DescriptionType,
-  CityType
+  CityType,
+  inputDescriptionType
 }

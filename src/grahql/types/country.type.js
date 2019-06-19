@@ -1,8 +1,7 @@
-const graphql = require('graphql');
+import * as graphql from 'graphql';
+import { DescriptionType } from './city.type';
 
-const { DescriptionType } = require('./city.type');
-
-module.exports = new graphql.GraphQLObjectType({
+export default new graphql.GraphQLObjectType({
   name: 'Country',
   fields: {
     country: { type: graphql.GraphQLString },

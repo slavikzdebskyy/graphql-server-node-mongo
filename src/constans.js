@@ -1,12 +1,10 @@
 const PORT = 4000;
 const citiesModelName = 'cities';
 const countriesModelName = 'countries';
-const queryName = 'MyQuery';
 
 
-module.exports = {
+export {
   PORT, 
   citiesModelName,
-  countriesModelName,
-  queryName
+  countriesModelName
 };
